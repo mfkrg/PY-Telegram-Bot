@@ -13,7 +13,7 @@ def start(message):
 
 @bot.message_handler()
 def get_user_text(message):
-    if message.text == "Погода Москва":
+    if message.text == "Погода Москва" or message.text == "погода москва" or message.text == "москва" or message.text == "Москва" or message.text == "погода Москва":
         WEATHER_MOSCOW = 'https://www.google.com/search?q=google+%D0%BF%D0%BE%D0%B3%D0%BE%D0%B4%D0%B0+%D0%B2+%D0%BC%D0%BE%D1%81%D0%BA%D0%B2%D0%B5'
         WEATHER_MOSCOW_TOM = 'https://www.google.com/search?q=%D0%9F%D0%BE%D0%B3%D0%BE%D0%B4%D0%B0+%D0%B2+%D0%BC%D0%BE%D1%81%D0%BA%D0%B2%D0%B5+%D0%B7%D0%B0%D0%B2%D1%82%D1%80%D0%B0&sxsrf=ALiCzsbJIE0efvWZRG1aGe3om-J5HW53hg%3A1660642099032&ei=M2P7YvLKAZOWrwSmqKvYDw&ved=0ahUKEwiysKXzhcv5AhUTy4sKHSbUCvsQ4dUDCA0&uact=5&oq=%D0%9F%D0%BE%D0%B3%D0%BE%D0%B4%D0%B0+%D0%B2+%D0%BC%D0%BE%D1%81%D0%BA%D0%B2%D0%B5+%D0%B7%D0%B0%D0%B2%D1%82%D1%80%D0%B0&gs_lcp=Cgdnd3Mtd2l6EAMyDAgjECcQnQIQRhCAAjIKCAAQgAQQhwIQFDIFCAAQgAQyBQgAEIAEMgUIABCABDIKCAAQgAQQhwIQFDIFCAAQgAQyBQgAEIAEMgUIABCABDIICAAQgAQQyQM6CggAEEcQsAMQyQM6BwgAEEcQsAM6BwgjECcQnQI6BAgjECc6BwgAEMkDEEM6EAguELEDEIMBEMcBENEDEEM6EAgAEIAEEIcCELEDEIMBEBQ6CwgAEIAEELEDEIMBOgcIIxDqAhAnOgQIABBDOgoIABCxAxCDARBDOggIABCxAxCDAToICAAQgAQQsQM6CAgAEIAEEIsDOg4IABCABBCxAxCDARCLAzoLCAAQgAQQsQMQiwNKBAhBGABKBAhGGABQ2AlY-TZgqThoBXABeAeAAf8DiAG5K5IBDDQuMTYuNC4xLjIuMZgBAKABAbABCsgBCLgBAsABAQ&sclient=gws-wiz'
         WEATHER_MOSCOW_3D = 'https://www.google.com/search?q=%D0%BF%D0%BE%D0%B3%D0%BE%D0%B4%D0%B0+%D0%B2+%D0%BC%D0%BE%D1%81%D0%BA%D0%B2%D0%B5+%D0%BF%D0%BE%D1%81%D0%BB%D0%B5%D0%B7%D0%B0%D0%B2%D1%82%D1%80%D0%B0&sxsrf=ALiCzsZu4zwMUO8A5DqP_V9vDS3qF67-aw%3A1660643865082&ei=GWr7YsfHBJX7rgTPxoEo&oq=%D0%9F%D0%BE%D0%B3%D0%BE%D0%B4%D0%B0+%D0%B2+%D0%BC%D0%BE%D1%81%D0%BA%D0%B2%D0%B5+%D0%BF%D0%BE%D1%81%D0%BB%D0%B5%D0%B7%D0%B0&gs_lcp=Cgdnd3Mtd2l6EAMYADIKCAAQgAQQRhCAAjIGCAAQHhAWMgYIABAeEBYyBggAEB4QFjoKCAAQRxCwAxDJAzoHCAAQRxCwAzoKCAAQgAQQhwIQFDoFCAAQgAQ6CAgAEB4QFhAKSgQIQRgASgQIRhgAUOMCWNoXYPgdaAFwAXgAgAFaiAHFBJIBATeYAQCgAQHIAQjAAQE&sclient=gws-wiz'
@@ -36,7 +36,7 @@ def get_user_text(message):
                          convert_msc_tom[0].text + " " + convert_msc_tom2[0].text + "\nПослезавтра: +" + convert_msc_3d[
                              0].text + " " + convert_msc_3d2[0].text, parse_mode="html")
 
-    if message.text == "Погода Чехов":
+    if message.text == "Погода Чехов" or message.text == "погода чехов" or message.text == "чехов" or message.text == "Чехов" or message.text == "погода Чехов":
         WEATHER_CHECKOV = 'https://www.google.com/search?q=google+%D0%BF%D0%BE%D0%B3%D0%BE%D0%B4%D0%B0+%D0%B2+%D1%87%D0%B5%D1%85%D0%BE%D0%B2%D0%B5&sxsrf=ALiCzsZ-1F9b5AmQoYy9AD5dRJgHE6j4dA%3A1660640952208&ei=uF77YtCqDMjMrgTN-4XADQ&ved=0ahUKEwjQ5rjQgcv5AhVIposKHc19AdgQ4dUDCA0&uact=5&oq=google+%D0%BF%D0%BE%D0%B3%D0%BE%D0%B4%D0%B0+%D0%B2+%D1%87%D0%B5%D1%85%D0%BE%D0%B2%D0%B5&gs_lcp=Cgdnd3Mtd2l6EAMyBggAEB4QFjoHCAAQRxCwAzoKCAAQRxCwAxDJAzoICAAQkgMQsAM6DAgjECcQnQIQRhCAAjoHCAAQyQMQQzoECAAQQzoFCAAQgAQ6CggAEIAEEIcCEBQ6CAgAEIAEEMkDOggIIRAeEBYQHUoECEEYAEoECEYYAFDnEVi-JWD3J2gCcAF4AIABmASIAe0MkgELMS40LjAuMS4wLjGYAQCgAQHIAQrAAQE&sclient=gws-wiz'
         WEATHER_CHECKOV_TOM = 'https://www.google.com/search?q=%D0%BF%D0%BE%D0%B3%D0%BE%D0%B4%D0%B0+%D0%B2+%D1%87%D0%B5%D1%85%D0%BE%D0%B2%D0%B5+%D0%B7%D0%B0%D0%B2%D1%82%D1%80%D0%B0&sxsrf=ALiCzsaQXP5VWPVjAGr8Hl1DUUpKi1mUoA%3A1660641699926&ei=o2H7YsCaOKusrgSHqYGwCA&ved=0ahUKEwiA-P20hMv5AhUrlosKHYdUAIYQ4dUDCA0&uact=5&oq=%D0%BF%D0%BE%D0%B3%D0%BE%D0%B4%D0%B0+%D0%B2+%D1%87%D0%B5%D1%85%D0%BE%D0%B2%D0%B5+%D0%B7%D0%B0%D0%B2%D1%82%D1%80%D0%B0&gs_lcp=Cgdnd3Mtd2l6EAMyBQgAEIAEMgUIABCABDIGCAAQHhAHMgoIABAeEA8QBxAFOgQIABBHOggIABAeEAgQBzoECAAQDUoECEEYAEoECEYYAFCTAVi_D2CsFGgAcAJ4AIABVIgBugOSAQE2mAEAoAEByAEIwAEB&sclient=gws-wiz'
         WEATHER_CHECKOV_3D = 'https://www.google.com/search?q=%D0%BF%D0%BE%D0%B3%D0%BE%D0%B4%D0%B0+%D0%B2+%D1%87%D0%B5%D1%85%D0%BE%D0%B2%D0%B5+%D0%BF%D0%BE%D1%81%D0%BB%D0%B5%D0%B7%D0%B0%D0%B2%D1%82%D1%80%D0%B0&sxsrf=ALiCzsYRx6xTa1hv7rA5TBTS-oKPdy_1Uw%3A1660641861077&ei=RWL7Yq2hBK6orgTW45SYCw&oq=%D0%BF%D0%BE%D0%B3%D0%BE%D0%B4%D0%B0+%D0%B2+%D1%87%D0%B5%D1%85%D0%BE%D0%B2%D0%B5+%D0%BF%D0%BE%D1%81%D0%BB&gs_lcp=Cgdnd3Mtd2l6EAMYADIFCCEQoAE6CggAEEcQsAMQyQM6BwgAEEcQsAM6BQgAEIAEOgkIABAeEMkDEBY6BggAEB4QFjoECCEQFUoECEEYAEoECEYYAFDABViPC2DJE2gBcAF4AIABeogBiQOSAQMyLjKYAQCgAQHIAQjAAQE&sclient=gws-wiz'
@@ -58,5 +58,7 @@ def get_user_text(message):
                          f"Сейчас в Чехове: +" + convert_ch[0].text + " " + convert_ch2[0].text + '\nЗавтра: +' +
                          convert_ch_tom[0].text + " " + convert_ch_tom2[0].text + '\nПослезавтра: +' + convert_ch_3d[
                              0].text + " " + convert_ch_3d2[0].text, parse_mode="html")
+
+
 
 bot.polling(none_stop=True)
