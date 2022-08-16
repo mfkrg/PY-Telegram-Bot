@@ -59,5 +59,4 @@ def get_user_text(message):
                          convert_ch_tom[0].text + " " + convert_ch_tom2[0].text + '\nПослезавтра: +' + convert_ch_3d[
                              0].text + " " + convert_ch_3d2[0].text, parse_mode="html")
 
-
 bot.polling(none_stop=True)
